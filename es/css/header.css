@@ -1,0 +1,155 @@
+/* Estilos generales del header */
+header {
+    background: var(--color-nav-bg);
+    padding: 12px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navbar (Flexbox para alinear elementos) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--padding-secciones);
+}
+
+/* Selector de idioma (A LA IZQUIERDA) */
+.idioma-selector {
+    display: flex;
+    gap: 10px;
+}
+
+.idioma-btn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: var(--color-nav-text);
+    transition: 0.3s;
+    font-family: var(--fuente-principal);
+}
+
+.idioma-btn.activo {
+    border-bottom: 2px solid var(--color-nav-text);
+}
+
+.idioma-btn:hover {
+    opacity: 0.8;
+}
+
+/* Contenedor del menú (A LA DERECHA) */
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Menú de navegación */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu li a {
+    color: var(--color-nav-text);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    font-family: var(--fuente-principal);
+}
+
+.nav-menu li a:hover {
+    color: var(--color-hover);
+}
+
+/* Botón toggle (Solo visible en móviles) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: var(--color-nav-text);
+    cursor: pointer;
+}
+
+/* Botón de WhatsApp en móvil */
+.boton-wassap-movil {
+    display: none;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.boton-wassap-movil a {
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    background: var(--color-boton-whatsapp);
+    transition: 0.3s;
+    font-family: var(--fuente-principal);
+}
+
+.boton-wassap-movil a:hover {
+    background: var(--color-boton-hover-whatsapp);
+}
+
+/* ✅ Adjustments for mobile */
+@media (max-width: 768px) {
+    /* ✅ REMOVE BACKGROUND BOX OF TOGGLE */
+    .menu-toggle {
+        display: block;
+        font-size: 24px; /* Adjust size */
+        background: none !important; /* Remove background */
+        border: none !important; /* Remove border */
+        padding: 5px; /* Adjust padding if necessary */
+        cursor: pointer;
+    }
+
+    /* ✅ Improve header padding to avoid pushing content down */
+    header {
+        padding: 10px 15px;
+    }
+
+    .navbar {
+        padding: 0 10px;
+    }
+
+    /* ✅ Improve menu dropdown */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px; /* Adjusted to align correctly */
+        right: 0;
+        width: 100%;
+        background: var(--color-nav-bg);
+        text-align: center;
+        padding: 8px 0;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 5px 0;
+        font-size: 16px;
+    }
+}

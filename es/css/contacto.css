@@ -1,0 +1,72 @@
+#contacto {
+    background-color: var(--color-fondo);
+    padding: var(--espaciado-secciones) var(--padding-secciones);
+    text-align: center;
+    font-family: var(--fuente-principal);
+}
+
+h2 {
+    font-size: var(--tamano-h2);
+    color: var(--color-texto);
+    margin-bottom: 20px;
+    font-family: var(--fuente-titulos);
+}
+
+/* Contenedor del formulario */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: var(--padding-secciones);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: var(--fuente-texto);
+}
+
+/* Grupos de formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Inputs y Textarea */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: var(--tamano-texto);
+    outline: none;
+    font-family: var(--fuente-texto);
+}
+
+/* Espaciado específico para el textarea */
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Botón de envío */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: var(--tamano-boton);
+    font-weight: bold;
+    color: white;
+    background: var(--color-botones);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-family: var(--fuente-titulos);
+}
+
+button:hover {
+    background: var(--color-hover);
+}
+
+/* Diseño Responsivo */
+@media (max-width: 480px) {
+    form {
+        width: 90%;
+    }
+}

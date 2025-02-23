@@ -1,0 +1,54 @@
+@media (max-width: 768px) {
+
+    /* SECTION: SERVICIOS */
+    .contenedor-servicios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicio {
+        width: 90%;
+    }
+
+    /* SECTION: SOBRE MÍ */
+    .contenedor-sobre-mi {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagen img {
+        width: 250px;
+        border-radius: var(--border-radius);
+    }
+
+    .texto {
+        text-align: center;
+        font-family: var(--fuente-principal);
+    }
+
+    /* CONTACT FORM */
+    #contacto {
+        width: 100%;
+        padding: var(--padding-secciones);
+        background: var(--color-fondo);
+    }
+
+    form {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: var(--border-radius);
+    }
+
+    input, textarea {
+        width: 100%;
+        font-size: var(--tamano-texto);
+        padding: 10px;
+    }
+
+    button {
+        font-size: var(--tamano-boton);
+        padding: 12px;
+        border-radius: var(--border-radius);
+    }
+}

@@ -1,0 +1,23 @@
+/* Variables Globales */
+:root {
+    /* Colores */
+    --color-primario: #1e3c72;
+    --color-secundario: #2a5298;
+    --color-acento: #6a5acd;
+    --color-texto: #2c3e50;
+    --color-fondo: #f4f4f4;
+    --color-botones: #6a5acd;
+    --color-hover: #5545c7;
+    --color-footer: #2c3e50;
+    --color-nav-bg: #2c3e50;
+    --color-nav-text: #ffffff;
+    --color-boton-whatsapp: #25d366;
+    --color-boton-hover-whatsapp: #1da851;
+
+    /* Fuentes */
+    --fuente-principal: 'Montserrat', sans-serif;
+
+    /* Espaciados */
+    --espaciado-secciones: 80px;
+    --padding-secciones: 20px;
+}

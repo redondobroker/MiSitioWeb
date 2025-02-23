@@ -1,0 +1,15 @@
+/* ✅ 1️⃣ Importar configuración base */
+@import url('reset.css');    /* Resetear estilos para evitar inconsistencias */
+@import url('variables.css'); /* Variables globales (colores, fuentes, etc.) */
+@import url('global.css');   /* Estilos generales de la página */
+
+/* ✅ 2️⃣ Importar secciones individuales */
+@import url('header.css');    /* Header y navegación */
+@import url('inicio.css');    /* Sección Inicio */
+@import url('servicios.css'); /* Sección Servicios */
+@import url('sobre-mi.css');  /* Sección Sobre Mí */
+@import url('contacto.css');  /* Sección Contacto */
+@import url('footer.css');    /* Pie de página */
+
+/* ✅ 3️⃣ Importar Estilos Responsivos */
+@import url('responsive.css'); /* Adaptabilidad a móviles y tablets */

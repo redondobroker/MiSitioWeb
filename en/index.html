@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redondo Lázaro Insurance Brokerage</title>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/main.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script defer src="js/script.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/scroll.js"></script>
+    <script defer src="js/idioma-inicio.js"></script>
+    <script defer src="js/idioma-header.js"></script>
+    <script defer src="js/formulario.js"></script>
+    <script>
+        function loadComponent(id, file) {
+            fetch(`components/${file}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`No se pudo cargar ${file} (HTTP ${response.status})`);
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById(id).innerHTML = html;
+                })
+                .catch(error => console.error(`Error cargando ${file}:`, error));
+        }
+    
+        // Cargar cada sección
+        document.addEventListener("DOMContentLoaded", function () {
+            loadComponent("header-container", "header.html");
+            loadComponent("inicio-container", "inicio.html");
+            loadComponent("servicios-container", "servicios.html");
+            loadComponent("sobre-mi-container", "sobre-mi.html");
+            loadComponent("contacto-container", "contacto.html");
+            loadComponent("footer-container", "footer.html");
+        });
+    </script>    
+</head>
+<body>
+
+    <!-- Contenedores para los componentes -->
+    <div id="header-container"></div>
+    <div id="inicio-container"></div>
+    <div id="servicios-container"></div>
+    <div id="sobre-mi-container"></div>
+    <div id="contacto-container"></div>
+    <div id="footer-container"></div>
+
+</body>
+</html>

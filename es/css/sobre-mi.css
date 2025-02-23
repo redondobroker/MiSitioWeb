@@ -1,0 +1,114 @@
+/* Sección Sobre Mí */
+#sobre-mi {
+    background-color: var(--color-fondo-2);
+    padding: var(--espaciado-secciones) var(--padding-secciones);
+    text-align: center;
+}
+
+/* Títulos */
+.titulo-sobre-mi {
+    font-size: var(--tamano-h1);
+    color: var(--color-texto);
+    margin-bottom: 10px;
+    font-family: var(--fuente-titulos);
+}
+
+.subtitulo-sobre-mi {
+    font-size: var(--tamano-h2);
+    color: var(--color-secundario);
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-family: var(--fuente-titulos);
+}
+
+/* Contenedor de imagen y texto */
+.contenedor-sobre-mi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Imagen de perfil */
+.imagen img {
+    width: 320px;
+    height: auto;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto */
+.texto {
+    max-width: 500px;
+}
+
+.texto p {
+    font-size: var(--tamano-texto);
+    color: var(--color-texto);
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: var(--fuente-texto);
+}
+
+/* Botones */
+.botones {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: var(--tamano-boton);
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    font-family: var(--fuente-texto);
+}
+
+/* WhatsApp Button */
+.whatsapp {
+    background-color: var(--color-boton-whatsapp);
+    color: white;
+    margin-right: 10px;
+}
+
+.whatsapp:hover {
+    background-color: var(--color-boton-hover-whatsapp);
+}
+
+/* Info Button */
+.info {
+    background-color: var(--color-botones);
+    color: white;
+}
+
+.info:hover {
+    background-color: var(--color-hover);
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .contenedor-sobre-mi {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagen img {
+        width: 250px;
+    }
+
+    .texto {
+        text-align: center;
+    }
+
+    .botones .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}

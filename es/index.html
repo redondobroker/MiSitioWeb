@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redondo Lázaro Insurance Brokerage</title>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/main.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script defer src="js/script.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/scroll.js"></script>
+    <script defer src="js/formulario.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const components = [
+                { id: "header-container", file: "header.html" },
+                { id: "inicio-container", file: "inicio.html" },
+                { id: "servicios-container", file: "servicios.html" },
+                { id: "sobre-mi-container", file: "sobre-mi.html" },
+                { id: "contacto-container", file: "contacto.html" },
+                { id: "footer-container", file: "footer.html" }
+            ];
+
+            function loadComponent(id, file) {
+                const container = document.getElementById(id);
+                if (!container) {
+                    console.error(`❌ Error: No se encontró el contenedor con ID "${id}"`);
+                    return;
+                }
+
+                fetch(`components/${file}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`❌ No se pudo cargar "${file}" (HTTP ${response.status})`);
+                        }
+                        return response.text();
+                    })
+                    .then(html => {
+                        container.innerHTML = html;
+                    })
+                    .catch(error => console.error(`⚠️ Error cargando "${file}":`, error));
+            }
+
+            components.forEach(comp => loadComponent(comp.id, comp.file));
+        });
+    </script>    
+</head>
+<body>
+
+    <!-- Contenedores para los componentes -->
+    <div id="header-container"></div>
+    <div id="inicio-container"></div>
+    <div id="servicios-container"></div>
+    <div id="sobre-mi-container"></div>
+    <div id="contacto-container"></div>
+    <div id="footer-container"></div>
+
+</body>
+</html>

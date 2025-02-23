@@ -1,0 +1,125 @@
+/* Sección de Inicio */
+#inicio {
+    position: relative;
+    height: 90vh;
+    background: linear-gradient(120deg, var(--color-primario), var(--color-secundario)); /* Fondo degradado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-nav-text);
+    padding: var(--padding-secciones);
+}
+
+/* Fondo oscuro sobre la imagen */
+#inicio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Contenido centrado */
+.contenido-inicio {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+/* Títulos */
+.titulo-inicio {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: var(--color-nav-text);
+    font-family: var(--fuente-principal);
+}
+
+.subtitulo-inicio {
+    font-size: 1.8em;
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: var(--color-acento);
+    font-family: var(--fuente-principal);
+}
+
+#inicio p {
+    font-size: 1.2em;
+    margin-bottom: 35px;
+    font-family: var(--fuente-principal);
+}
+
+/* Botones */
+.botones-inicio {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-family: var(--fuente-principal);
+}
+
+/* WhatsApp Button */
+.whatsapp {
+    background: var(--color-boton-whatsapp);
+    color: white;
+}
+
+.whatsapp:hover {
+    background: var(--color-boton-hover-whatsapp);
+}
+
+/* Cita Button */
+.cita {
+    background: var(--color-botones);
+    color: white;
+}
+
+.cita:hover {
+    background: var(--color-hover);
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    #inicio {
+        min-height: 85vh; /* Make sure content fits well on smaller screens */
+        padding: 60px 30px 40px; /* More top space so text doesn't get hidden under header */
+    }
+
+    .titulo-inicio {
+        font-size: 1.8em;
+    }
+
+    .subtitulo-inicio {
+        font-size: 1.3em;
+    }
+
+    #inicio p {
+        font-size: 1em;
+        margin-bottom: 25px;
+    }
+
+    .botones-inicio {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 1em;
+        padding: 12px;
+    }
+}

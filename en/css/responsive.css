@@ -1,0 +1,51 @@
+@media (max-width: 768px) {
+    /* Ajustes para el menú */
+    .nav-menu {
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    /* Sección Inicio */
+    #inicio {
+        height: 80vh;
+        padding: 30px;
+    }
+
+    .titulo-inicio {
+        font-size: 2em;
+    }
+
+    .subtitulo-inicio {
+        font-size: 1.5em;
+    }
+
+    /* Servicios */
+    .contenedor-servicios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Sobre Mí */
+    .contenedor-sobre-mi {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagen img {
+        width: 250px;
+    }
+
+    .texto {
+        text-align: center;
+    }
+
+    /* Contacto */
+    #contacto {
+        width: 90%;
+    }
+}
+

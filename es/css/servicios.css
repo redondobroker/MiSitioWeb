@@ -1,0 +1,93 @@
+/* Sección de Servicios */
+#servicios {
+    text-align: center;
+    padding: var(--espaciado-secciones) var(--padding-secciones);
+    background-color: var(--color-fondo);
+}
+
+#servicios h2 {
+    font-size: 2.5em;
+    color: var(--color-texto);
+    margin-bottom: 30px;
+}
+
+/* Contenedor de los servicios */
+.contenedor-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Tarjetas con efecto flip */
+.servicio {
+    perspective: 1000px;
+    width: 280px;
+    height: 180px;
+}
+
+/* Contenedor interno con animación de giro */
+.servicio-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* Efecto de giro al pasar el cursor */
+.servicio:hover .servicio-inner {
+    transform: rotateY(180deg);
+}
+
+/* Caras frontal y trasera de la tarjeta */
+.servicio-front, .servicio-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-family: var(--fuente-principal);
+}
+
+/* Estilo de la cara frontal */
+.servicio-front {
+    background: var(--color-texto);
+}
+
+/* Estilo de la cara trasera */
+.servicio-back {
+    background: var(--color-secundario);
+    transform: rotateY(180deg);
+    font-size: 1em;
+    padding: 10px;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .contenedor-servicios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicio {
+        width: 90%;
+    }
+}
+
+/* Cuando la clase "visible" se activa */
+#servicios.visible h2 {
+    opacity: 1;
+    transform: translateY(0);
+    background-color: var(--color-fondo);
+
+}
