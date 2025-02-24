@@ -1,34 +1,63 @@
+/* Sección Contacto */
 #contacto {
     background-color: var(--color-fondo);
     padding: var(--espaciado-secciones) var(--padding-secciones);
     text-align: center;
-    font-family: var(--fuente-principal);
 }
 
-h2 {
-    font-size: var(--tamano-h2);
+/* Contenedor */
+.contenedor-contacto {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Títulos */
+.titulo-contacto {
+    font-size: var(--tamano-h1);
     color: var(--color-texto);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-family: var(--fuente-titulos);
 }
 
-/* Contenedor del formulario */
+.subtitulo-contacto {
+    font-size: var(--tamano-h2);
+    color: var(--color-secundario);
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: var(--fuente-titulos);
+}
+
+.contacto-resaltado {
+    color: #d64c63; /* Cambia el color a tu preferencia */
+    font-weight: bold;
+}
+
+
+/* Mensaje de acción */
+.mensaje-accion {
+    font-size: var(--tamano-texto);
+    color: var(--color-texto);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: var(--fuente-texto);
+}
+
+/* Formulario */
 form {
     max-width: 500px;
     margin: 0 auto;
     background: white;
-    padding: var(--padding-secciones);
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: var(--fuente-texto);
 }
 
-/* Grupos de formulario */
+/* Campos del formulario */
 .form-group {
     margin-bottom: 15px;
 }
 
-/* Inputs y Textarea */
 input, textarea {
     width: 100%;
     padding: 12px;
@@ -39,9 +68,9 @@ input, textarea {
     font-family: var(--fuente-texto);
 }
 
-/* Espaciado específico para el textarea */
+/* Ajuste específico para el textarea */
 textarea {
-    height: 150px;
+    height: 120px;
     resize: none;
 }
 
@@ -64,9 +93,64 @@ button:hover {
     background: var(--color-hover);
 }
 
-/* Diseño Responsivo */
-@media (max-width: 480px) {
-    form {
+/* ✅ Estilos para el modal */
+.modal {
+    display: none; /* 🔹 Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 🔹 Fondo oscuro semitransparente */
+    justify-content: center;
+    align-items: center;
+}
+
+/* ✅ Contenido del modal */
+.modal-contenido {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+/* ✅ Botón dentro del modal */
+#cerrar-modal {
+    background: var(--color-boton-whatsapp);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#cerrar-modal:hover {
+    background: var(--color-boton-hover-whatsapp);
+}
+
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .contenedor-contacto {
         width: 90%;
+    }
+
+    .titulo-contacto {
+        font-size: 2em;
+    }
+
+    .subtitulo-contacto {
+        font-size: 1.5em;
+    }
+
+    .mensaje-accion {
+        font-size: 1em;
+    }
+
+    form {
+        width: 100%;
     }
 }

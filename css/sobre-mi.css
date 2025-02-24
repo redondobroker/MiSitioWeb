@@ -24,7 +24,7 @@
 /* Contenedor de imagen y texto */
 .contenedor-sobre-mi {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Alinea los elementos arriba */
     justify-content: center;
     gap: 40px;
     max-width: 1000px;
@@ -34,18 +34,23 @@
 
 /* Imagen de perfil */
 .imagen img {
-    width: 320px;
+    width: 270px;
     height: auto;
     border-radius: var(--border-radius);
     object-fit: cover;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Texto */
+/* Texto alineado con la imagen */
 .texto {
     max-width: 500px;
+    align-self: flex-start; /* Hace que el texto empiece alineado con la imagen */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
+/* Estilo del texto */
 .texto p {
     font-size: var(--tamano-texto);
     color: var(--color-texto);
@@ -59,6 +64,7 @@
     margin-top: 20px;
 }
 
+/* Botón general */
 .btn {
     display: inline-block;
     text-decoration: none;
@@ -96,6 +102,7 @@
     .contenedor-sobre-mi {
         flex-direction: column;
         text-align: center;
+        align-items: center; /* Centra los elementos en móvil */
     }
 
     .imagen img {
@@ -104,6 +111,7 @@
 
     .texto {
         text-align: center;
+        align-self: center; /* Centra el texto en pantallas pequeñas */
     }
 
     .botones .btn {
