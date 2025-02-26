@@ -25,11 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // ✅ Cerrar modal al hacer clic en el botón
-    cerrarModal.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
-
     // ✅ Cerrar modal si el usuario hace clic fuera del cuadro
     window.addEventListener("click", function (event) {
         if (event.target === modal) {
