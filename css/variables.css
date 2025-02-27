@@ -2,16 +2,16 @@
 
 :root {
     /* Colores */
-    --color-primario: #1e3c72;
-    --color-secundario: #2a5298;
-    --color-acento: #ffffff;
+    --color-primario: #113379;
+    --color-secundario: #266ad6;
+    --color-acento: #edeff5;
     --color-texto: #2c3e50;
     --color-fondo: #f4f4f4;
     --color-fondo-2: #ffffff;
-    --color-botones: #3469c4;
+    --color-botones: #266ad6;
     --color-hover: #2a5298;
-    --color-footer: #2c3e50;
-    --color-nav-bg: #2c3e50;
+    --color-footer: #325577;
+    --color-nav-bg: #345b83;
     --color-nav-text: #ffffff;
     --color-boton-whatsapp: #25d366;
     --color-boton-hover-whatsapp: #1da851;
