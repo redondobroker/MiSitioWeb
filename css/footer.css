@@ -1,33 +1,88 @@
-footer {
-    background: var(--color-footer);
+/* 🔹 Footer General Styles */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 50px;
+    background-color: var(--color-footer);
     color: var(--color-nav-text);
-    padding: var(--padding-secciones);
-    text-align: center;
-    font-size: var(--tamano-texto);
-    font-family: var(--fuente-principal);
 }
 
-.contenedor-footer {
+/* 🔹 Section Titles */
+.footer-section h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 🔹 Align Company Info & Contact */
+.company-info, .contact-info {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    justify-content: center;
+    text-align: left;
 }
 
-/* Redes sociales */
-.redes-sociales {
-    display: flex;
-    gap: 15px;
+/* 🔹 Contact Aligning with Address */
+.contact-info {
+    text-align: left;
+    min-width: 250px;
+    margin-left: -100px;
 }
 
-.redes-sociales a {
+/* 🔹 Quick Links (Centered Left) */
+.footer-links {
+    text-align: left;
+    min-width: 200px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
     color: var(--color-nav-text);
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    font-family: var(--fuente-texto);
+    transition: 0.3s;
 }
 
-.redes-sociales a:hover {
+.footer-links ul li a:hover {
     color: var(--color-acento);
 }
+
+/* 🔹 Footer Bottom Section */
+.footer-bottom {
+    background-color: var(--color-footer); /* ✅ Same color as the footer */
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* ✅ Add the horizontal white line */
+.footer-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.4);
+    margin-bottom: 10px;
+}
+
+/* ✅ Keep the Copyright in the same color */
+.footer-bottom-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.copyright-text {
+    font-size: 0.9em;
+    color: var(--color-acento);
+}
+
+
+
