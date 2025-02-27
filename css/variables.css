@@ -2,8 +2,8 @@
 
 :root {
     /* Colores */
-    --color-primario: #113379;
-    --color-secundario: #266ad6;
+    --color-primario: #0e2e6d;
+    --color-secundario: #3c7fec;
     --color-acento: #edeff5;
     --color-texto: #2c3e50;
     --color-fondo: #f4f4f4;
@@ -17,9 +17,9 @@
     --color-boton-hover-whatsapp: #1da851;
 
     /* Fuentes */
-    --fuente-principal: 'Montserrat', sans-serif;
-    --fuente-titulos: 'Montserrat', sans-serif;
-    --fuente-texto: 'Montserrat', sans-serif;
+    --fuente-principal: 'Popins', sans-serif;
+    --fuente-titulos: 'Popins', sans-serif;
+    --fuente-texto: 'Popins', sans-serif;
 
     /* Tamaños de Fuente */
     --tamano-h1: 2.5em;

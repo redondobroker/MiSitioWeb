@@ -29,8 +29,9 @@
 }
 
 .contacto-resaltado {
-    color: #d64c63; /* Cambia el color a tu preferencia */
+    color: #ffee00; /* Cambia el color a tu preferencia */
     font-weight: bold;
+    font-size: 1.5em;
 }
 
 

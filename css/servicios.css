@@ -3,6 +3,7 @@
     text-align: center;
     padding: var(--espaciado-secciones) var(--padding-secciones);
     background-color: var(--color-fondo);
+
 }
 
 #servicios h2 {

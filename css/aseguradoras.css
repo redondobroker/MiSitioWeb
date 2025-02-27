@@ -1,0 +1,93 @@
+#aseguradoras {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--color-fondo-2);
+    overflow: hidden;
+    position: relative;
+}
+
+.titulo-aseguradoras {
+    font-size: 2em;
+    color: var(--color-texto);
+    margin-bottom: 20px;
+}
+
+.carrusel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.carrusel {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    cursor: grab; /* Cursor for mobile interaction */
+}
+
+.carrusel-track {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Keep space between logos */
+    white-space: nowrap;
+    animation: scroll 40s linear infinite; /* Moves automatically on all devices */
+}
+
+/* 🔄 Seamless infinite loop */
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Logo adjustments */
+.carrusel-item {
+    flex: 0 0 auto;
+    width: 160px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Restore the dots between logos */
+.separator {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-secundario);
+    border-radius: 50%;
+    flex-shrink: 0; /* Prevents resizing */
+}
+
+/* Adjust images */
+.carrusel-item img {
+    max-width: 140px;
+    max-height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+/* 🔵 Fix Generali logo */
+.carrusel-item img[alt="Generali"] {
+    width: 110px; /* Adjust size */
+    height: auto;
+    transform: translateY(5px); /* Align properly */
+}
+
+/* 🔵 Adjust Zurich logo */
+.carrusel-item img[alt="Zurich"] {
+    width: 170px; /* Adjust size */
+    height: auto;
+    transform: translateY(5px); /* Align properly */
+}
+
+
+/* ✅ Make it interactive only on mobile */
+@media (max-width: 768px) {
+    .carrusel-track {
+        animation: scroll 50s linear infinite; /* Ensure movement on mobile */
+        cursor: grab;
+    }
+}

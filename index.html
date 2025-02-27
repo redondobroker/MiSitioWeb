@@ -9,45 +9,6 @@
     <link rel="stylesheet" href="css/main.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <!-- Scripts -->
-    <script defer src="js/script.js"></script>
-    <script defer src="js/menu.js"></script>
-    <script defer src="js/formulario.js"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const components = [
-                { id: "header-container", file: "header.html" },
-                { id: "inicio-container", file: "inicio.html" },
-                { id: "servicios-container", file: "servicios.html" },
-                { id: "sobre-mi-container", file: "sobre-mi.html" },
-                { id: "contacto-container", file: "contacto.html" },
-                { id: "footer-container", file: "footer.html" }
-            ];
-
-            function loadComponent(id, file) {
-                const container = document.getElementById(id);
-                if (!container) {
-                    console.error(`❌ Error: No se encontró el contenedor con ID "${id}"`);
-                    return;
-                }
-
-                fetch(`components/${file}`)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error(`❌ No se pudo cargar "${file}" (HTTP ${response.status})`);
-                        }
-                        return response.text();
-                    })
-                    .then(html => {
-                        container.innerHTML = html;
-                    })
-                    .catch(error => console.error(`⚠️ Error cargando "${file}":`, error));
-            }
-
-            components.forEach(comp => loadComponent(comp.id, comp.file));
-        });
-    </script>    
 </head>
 <body>
 
@@ -57,7 +18,15 @@
     <div id="servicios-container"></div>
     <div id="sobre-mi-container"></div>
     <div id="contacto-container"></div>
+    <div id="aseguradoras-container"></div>
     <div id="footer-container"></div>
+    
+
+    <!-- Scripts (se han movido al final del <body> para evitar problemas de carga) -->
+    <script defer src="js/componentes.js"></script>  <!-- Maneja la carga dinámica de componentes -->
+    <script defer src="js/menu.js"></script>        <!-- Maneja el menú de navegación -->
+    <script defer src="js/formulario.js"></script>  <!-- Maneja el formulario de contacto -->
+    <script defer src="js/carrusel.js"></script>    <!-- Carrusel interactivo -->
 
 </body>
 </html>

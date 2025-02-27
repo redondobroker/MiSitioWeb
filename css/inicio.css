@@ -9,6 +9,9 @@
     text-align: center;
     color: var(--color-nav-text);
     padding: var(--padding-secciones);
+    border-bottom-left-radius: 50px; /* Adjust as needed */
+    border-bottom-right-radius: 50px;
+    overflow: hidden; /* Prevents content from overflowing */
 }
 
 /* Fondo oscuro sobre la imagen */
@@ -48,10 +51,16 @@
     font-family: var(--fuente-principal);
 }
 
+.contacto-resaltado {
+    color: white; /* This might be red */
+    font-weight: bold;
+}
+
 #inicio p {
     font-size: 1.2em;
     margin-bottom: 35px;
     font-family: var(--fuente-principal);
+
 }
 
 /* Botones */
