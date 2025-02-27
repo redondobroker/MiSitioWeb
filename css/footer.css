@@ -86,3 +86,24 @@
 
 
 
+@media (max-width: 768px) {
+    .footer-links {
+        display: none; /* Hides menu in mobile */
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center; /* Centers everything */
+        text-align: center;
+    }
+
+    .company-info, .contact-info {
+        text-align: center; /* Aligns text in the center */
+        margin-left: 0; /* Removes negative margin */
+    }
+
+    .contact-info p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
