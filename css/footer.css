@@ -87,23 +87,69 @@
 
 
 @media (max-width: 768px) {
+    /* 🔹 Hide Menu */
     .footer-links {
-        display: none; /* Hides menu in mobile */
-    }
-    .footer-container {
-        flex-direction: column;
-        align-items: center; /* Centers everything */
-        text-align: center;
+        display: none; /* Hides navigation in mobile */
     }
 
-    .company-info, .contact-info {
-        text-align: center; /* Aligns text in the center */
-        margin-left: 0; /* Removes negative margin */
+    /* 🔹 Center Everything */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px; /* Spacing between sections */
+        padding: 20px;
+    }
+
+    /* 🔹 Company Info Centered */
+    .company-info {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* 🔹 Contact Section Properly Centered */
+    .contact-info {
+        text-align: center;
+        width: 100%;
+        max-width: 300px; /* Ensures proper width */
+        margin: 0 auto; /* Centers the whole block */
+    }
+
+    /* 🔹 Fix Contact Alignment */
+    .contact-info h4 {
+        margin-bottom: 8px; /* Space between title and details */
     }
 
     .contact-info p {
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 5px; /* Adjust space between icon and text */
+        margin: 2px 0;
+        font-size: 1em;
+        flex-wrap: nowrap; /* Prevents wrapping issues */
+    }
+
+    /* 🔹 Contact Icons Size */
+    .contact-info p img {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* 🔹 Email & Phone Text */
+    .contact-info a {
+        text-decoration: none;
+        color: var(--color-nav-text);
+        font-size: 1em;
+        font-weight: normal;
+    }
+
+    /* 🔹 Footer Bottom */
+    .footer-bottom {
+        padding: 10px 0;
+        font-size: 1em;
+        text-align: center;
     }
 }
+
+
