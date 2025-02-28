@@ -1,94 +1,96 @@
-/* Sección de Servicios */
+/* 🔹 Estilos generales */
 #servicios {
     text-align: center;
-    padding: var(--espaciado-secciones) var(--padding-secciones);
+    padding: 60px 20px;
     background-color: var(--color-fondo);
-
+    height: 100vh;
 }
 
-#servicios h2 {
-    font-size: 2.5em;
+/* 🔹 Títulos y descripción */
+.titulo-seccion {
+    font-size: var(--tamano-h1);
     color: var(--color-texto);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    font-family: var(--fuente-titulos);
 }
 
-/* Contenedor de los servicios */
-.contenedor-servicios {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Tarjetas con efecto flip */
-.servicio {
-    perspective: 1000px;
-    width: 280px;
-    height: 180px;
-}
-
-/* Contenedor interno con animación de giro */
-.servicio-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
-}
-
-/* Efecto de giro al pasar el cursor */
-.servicio:hover .servicio-inner {
-    transform: rotateY(180deg);
-}
-
-/* Caras frontal y trasera de la tarjeta */
-.servicio-front, .servicio-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--border-radius);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 1.2em;
+.descripcion-seccion {
+    font-size: var(--tamano-h2);
+    color: var(--color-secundario);
+    font-family: var(--fuente-texto);
+    margin-bottom: 40px;
     font-weight: bold;
-    color: white;
+
+}
+
+/* 🔹 Contenedor de servicios en formato grid */
+.contenedor-servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en desktop */
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+/* 🔹 Estilos de cada servicio */
+.servicio {
     text-align: center;
-    padding: 15px;
-    font-family: var(--fuente-principal);
+    padding: 25px;
+    width: 100%;
+    max-width: 350px;
+    background: var(--color-fondo-2);
+    border-radius: var(--border-radius);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-/* Estilo de la cara frontal */
-.servicio-front {
-    background: var(--color-texto);
+.servicio:hover {
+    transform: translateY(-5px);
 }
 
-/* Estilo de la cara trasera */
-.servicio-back {
-    background: var(--color-secundario);
-    transform: rotateY(180deg);
-    font-size: 1em;
-    padding: 10px;
+/* 🔹 Tamaño y estilos de los iconos */
+.servicio img {
+    width: 60px;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
 }
 
-/* Diseño responsivo */
+/* 🔹 Títulos */
+.servicio h3 {
+    font-size: var(--tamano-h3);
+    color: var(--color-texto);
+    margin-bottom: 10px;
+}
+
+/* 🔹 Texto */
+.servicio p {
+    font-size: var(--tamano-texto);
+    color: #555;
+    line-height: 1.6;
+}
+
+/* 🔹 Diseño responsive: 1 columna en móviles */
 @media (max-width: 768px) {
     .contenedor-servicios {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr; /* Se muestra en una sola columna */
     }
 
     .servicio {
-        width: 90%;
+        max-width: 100%;
+        padding: 30px;
     }
-}
 
-/* Cuando la clase "visible" se activa */
-#servicios.visible h2 {
-    opacity: 1;
-    transform: translateY(0);
-    background-color: var(--color-fondo);
+    .servicio img {
+        width: 50px; /* Reduce tamaño en móvil */
+    }
 
+    .titulo-seccion {
+        font-size: var(--tamano-h2);
+    }
+
+    .descripcion-seccion {
+        font-size: var(--tamano-texto);
+    }
 }

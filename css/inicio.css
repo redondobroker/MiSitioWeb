@@ -1,20 +1,18 @@
-/* Sección de Inicio */
+/* 🎨 Enhanced Hero Section */
 #inicio {
     position: relative;
-    height: 90vh;
-    background: linear-gradient(120deg, var(--color-primario), var(--color-secundario)); /* Fondo degradado */
+    height: 100vh;
+    background: linear-gradient(135deg, var(--color-primario) 30%, var(--color-secundario) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--color-nav-text);
     padding: var(--padding-secciones);
-    border-bottom-left-radius: 50px; /* Adjust as needed */
-    border-bottom-right-radius: 50px;
-    overflow: hidden; /* Prevents content from overflowing */
+    overflow: hidden;
 }
 
-/* Fondo oscuro sobre la imagen */
+/* 🔹 Dark Overlay for Better Readability */
 #inicio::before {
     content: "";
     position: absolute;
@@ -22,113 +20,106 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.6) 100%);
     z-index: 1;
 }
 
-/* Contenido centrado */
+/* ✨ Content Styling */
 .contenido-inicio {
     position: relative;
     z-index: 2;
     max-width: 900px;
+    padding: 20px;
 }
 
-/* Títulos */
+/* 🏆 Title Styling */
 .titulo-inicio {
-    font-size: 2.5em;
+    font-size: 3.2em;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 15px;
-    color: var(--color-nav-text);
-    font-family: var(--fuente-principal);
+    margin-bottom: 20px;
+    color: white;
+    font-family: var(--fuente-titulos);
+    letter-spacing: 1px;
 }
 
+/* 🔹 Subtitle */
 .subtitulo-inicio {
     font-size: 1.8em;
     font-weight: 400;
     margin-bottom: 25px;
     color: var(--color-acento);
-    font-family: var(--fuente-principal);
+    font-family: var(--fuente-titulos);
 }
 
-.contacto-resaltado {
-    color: white; /* This might be red */
-    font-weight: bold;
-}
-
-#inicio p {
-    font-size: 1.2em;
-    margin-bottom: 35px;
-    font-family: var(--fuente-principal);
-
-}
-
-/* Botones */
-.botones-inicio {
+/* 🟢 WhatsApp Button Floating */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background-color: var(--color-boton-whatsapp);
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
-    gap: 15px;
+    align-items: center;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
+.whatsapp-btn:hover {
+    background-color: var(--color-boton-hover-whatsapp);
+    transform: scale(1.1);
+}
+
+/* 🎨 Buttons */
 .btn {
     display: inline-block;
-    padding: 12px 20px;
-    font-size: 1.1em;
+    padding: 20px 34px;
+    font-size: 1.2em;
     font-weight: bold;
     border-radius: 8px;
     text-decoration: none;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
     font-family: var(--fuente-principal);
+    margin-top: 20px;
 }
 
-/* WhatsApp Button */
-.whatsapp {
-    background: var(--color-boton-whatsapp);
-    color: white;
-}
-
-.whatsapp:hover {
-    background: var(--color-boton-hover-whatsapp);
-}
-
-/* Cita Button */
+/* 🔵 Call to Action Button */
 .cita {
     background: var(--color-botones);
     color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .cita:hover {
     background: var(--color-hover);
+    transform: translateY(-3px);
 }
 
-/* Diseño responsivo */
+/* 📱 Responsive Adjustments */
 @media (max-width: 768px) {
     #inicio {
-        min-height: 85vh; /* Make sure content fits well on smaller screens */
-        padding: 60px 30px 40px; /* More top space so text doesn't get hidden under header */
+        height: 85vh;
+        padding: 50px 20px;
     }
 
     .titulo-inicio {
-        font-size: 1.8em;
+        font-size: 2em;
     }
 
     .subtitulo-inicio {
-        font-size: 1.3em;
-    }
-
-    #inicio p {
-        font-size: 1em;
-        margin-bottom: 25px;
-    }
-
-    .botones-inicio {
-        flex-direction: column;
-        gap: 10px;
+        font-size: 1.4em;
     }
 
     .btn {
-        width: 100%;
         font-size: 1em;
-        padding: 12px;
+        padding: 12px 20px;
+    }
+
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
     }
 }

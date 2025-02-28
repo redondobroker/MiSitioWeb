@@ -15,3 +15,34 @@ html {
     scroll-behavior: smooth;
 }
 
+/* 🔹 Ajusta la posición y previene el desbordamiento */
+.whatsapp-button {
+    position: fixed;
+    bottom: 80px; /* Ajusta la altura */
+    right: 20px;  /* Mueve un poco más hacia la izquierda */
+    width: 55px;  /* Reduce el tamaño ligeramente */
+    height: 20px;
+    z-index: 100; /* Siempre visible encima del contenido */
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* 🔹 Asegura que el botón no se corte */
+.whatsapp-button img {
+    max-width: 100%; 
+    display: block;
+}
+
+/* 🔹 Efecto al pasar el mouse */
+.whatsapp-button:hover {
+    transform: scale(1.2);
+}
+
+/* 🔹 Ajustes para móviles */
+@media (max-width: 768px) {
+    .whatsapp-button {
+        bottom: 70px;
+        right: 10px; /* Ajusta la posición en móviles */
+        width: 50px;
+    }
+}
