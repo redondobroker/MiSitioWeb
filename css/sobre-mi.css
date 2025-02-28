@@ -4,7 +4,7 @@
     padding: var(--espaciado-secciones) var(--padding-secciones);
     text-align: center;
     height: auto; /* 🔥 Fix the height issue */
-    min-height: 80vh; /* 🔥 Make sure it has enough space */
+    min-height: 60vh; /* 🔥 Make sure it has enough space */
 }
 
 /* Títulos */
