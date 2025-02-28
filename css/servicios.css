@@ -3,7 +3,8 @@
     text-align: center;
     padding: 60px 20px;
     background-color: var(--color-fondo);
-    height: 100vh;
+    min-height: auto; /* 🔥 Fix height issue */
+    padding-bottom: 80px; /* 🔥 Ensure space between sections */
 }
 
 /* 🔹 Títulos y descripción */
@@ -72,25 +73,32 @@
 }
 
 /* 🔹 Diseño responsive: 1 columna en móviles */
+/* 🔹 Fix Overlapping in Mobile */
 @media (max-width: 768px) {
     .contenedor-servicios {
-        grid-template-columns: 1fr; /* Se muestra en una sola columna */
+        display: flex;
+        flex-direction: column; /* 🔥 Force single column */
+        gap: 20px; /* 🔥 Ensure space between items */
+        align-items: center;
     }
 
     .servicio {
-        max-width: 100%;
-        padding: 30px;
+        width: 90%; /* 🔥 Ensure services don't get too wide */
+        max-width: 350px;
+        padding: 20px;
+        margin-bottom: 20px; /* 🔥 Add spacing between each service */
     }
 
-    .servicio img {
-        width: 50px; /* Reduce tamaño en móvil */
+    /* 🔹 Ensure Section Below is Pushed Down */
+    #sobre-mi {
+        margin-top: 50px; /* 🔥 Adds space to prevent overlap */
     }
 
-    .titulo-seccion {
-        font-size: var(--tamano-h2);
-    }
-
-    .descripcion-seccion {
-        font-size: var(--tamano-texto);
+    /* 🔹 WhatsApp Button Fix */
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 15px;
+        z-index: 100;
     }
 }

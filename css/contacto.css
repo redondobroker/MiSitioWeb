@@ -3,6 +3,8 @@
     background-color: var(--color-fondo);
     padding: var(--espaciado-secciones) var(--padding-secciones);
     text-align: center;
+    padding-top: 80px; /* Ensures the section starts lower */
+    position: relative;
 }
 
 /* Contenedor */
@@ -133,25 +135,65 @@ button:hover {
 }
 
 
-/* Diseño responsivo */
 @media (max-width: 768px) {
-    .contenedor-contacto {
-        width: 90%;
+    /* 🟢 Ensure Contact Section is Centered */
+    #contacto {
+        padding: 60px 20px; /* Adjust padding */
+        text-align: center;
     }
 
+    .contenedor-contacto {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* 🟢 Fix Title Overlapping */
     .titulo-contacto {
         font-size: 2em;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 2;
     }
 
     .subtitulo-contacto {
-        font-size: 1.5em;
+        font-size: 1.3em;
+        margin-bottom: 10px;
     }
 
     .mensaje-accion {
         font-size: 1em;
+        margin-bottom: 20px;
     }
 
+    /* 🟢 Ensure Contact Form is Centered */
     form {
+        width: 90%;
+        max-width: 400px;
+        margin: 30px auto; /* Center it properly */
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    input, textarea {
         width: 100%;
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 12px;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    /* 🟢 Fix WhatsApp Button Position */
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+        z-index: 1000;
     }
 }

@@ -98,10 +98,41 @@
     transform: translateY(-3px);
 }
 
+/* 🔹 WhatsApp Floating Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* 🔥 Adjust this value to move it higher */
+    right: 20px; /* 🔥 Keeps it on the right */
+    width: 55px; /* 🔥 Adjusted size */
+    height: 55px;
+    z-index: 1000; /* 🔥 Ensures it's above other elements */
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-button img {
+    width: 100%;
+    height: auto;
+}
+
+/* 🔹 WhatsApp Hover Effect */
+.whatsapp-button:hover {
+    transform: scale(1.1); /* 🔥 Slight zoom effect */
+}
+
+/* 🔹 Fix for Mobile Devices */
+@media (max-width: 768px) {
+    .whatsapp-button {
+        bottom: 80px; /* 🔥 Moves button slightly higher on mobile */
+        right: 15px; /* 🔥 Keeps it aligned */
+        width: 50px; /* 🔥 Slightly smaller for mobile */
+        height: 50px;
+    }
+}
+
 /* 📱 Responsive Adjustments */
 @media (max-width: 768px) {
     #inicio {
-        height: 85vh;
+        height: 100vh;
         padding: 50px 20px;
     }
 

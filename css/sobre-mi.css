@@ -3,9 +3,8 @@
     background-color: var(--color-fondo-2);
     padding: var(--espaciado-secciones) var(--padding-secciones);
     text-align: center;
-    border-top-left-radius: -50px;
-    border-top-right-radius: -50px;
-    height: 65vh;
+    height: auto; /* 🔥 Fix the height issue */
+    min-height: 80vh; /* 🔥 Make sure it has enough space */
 }
 
 /* Títulos */
@@ -115,30 +114,36 @@
 }
 
 /* Diseño responsivo */
+/* 🔹 Responsive Fixes for Mobile */
 @media (max-width: 768px) {
     .contenedor-sobre-mi {
         flex-direction: column;
         text-align: center;
-        align-items: center; /* Centra los elementos en móvil */
+        align-items: center;
+        gap: 20px; /* 🔥 Reduce spacing to avoid too much space */
     }
 
+    /* 🟢 FIX: Adjust Image Size for Mobile */
     .imagen img {
-        width: 59px; /* Slightly smaller on mobile */
-        height: 20;
-        border-radius: 12px; /* Keep rounded corners */
-    }.imagen img {
-        width: 59px; /* Slightly smaller on mobile */
-        border-radius: 12px; /* Keep rounded corners */
+        width: 120px; /* 🔥 Make it visible but not too big */
+        height: auto;
+        border-radius: 12px;
     }
 
+    /* 🟢 FIX: Ensure Text Wraps Properly */
     .texto {
-        text-align: center;
-        align-self: center; /* Centra el texto en pantallas pequeñas */
+        max-width: 600px; /* 🔥 Make text less stretched */
+        margin: 0 auto; /* 🔥 Centers text */
+        text-align: justify; /* 🔥 Ensures better alignment */
+        line-height: 1.8; /* 🔥 More space between lines */
+        padding: 0 20px; /* 🔥 Adds side padding */
     }
 
+    /* 🟢 Adjust Button Spacing */
     .botones .btn {
-        display: block;
-        width: 100%;
-        margin: 10px 0;
+        display: inline-block;
+        width: auto;
+        margin: 10px 5px;
+        padding: 10px 15px;
     }
 }
